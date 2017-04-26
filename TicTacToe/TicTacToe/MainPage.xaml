@@ -3,9 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TicTacToe"
              x:Class="TicTacToe.MainPage">
-
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <ScrollView Orientation="Vertical" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Button Text="NEW GAME" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Margin="20, 30, 20, 10" Clicked="NewGameClicked"/>
+            <Label x:Name="CurrentPlayer" Text="Playing: ..." TextColor="White" Margin="20, 10, 20, 10" FontSize="40" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalOptions="Start" VerticalTextAlignment="Center"></Label>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" WidthRequest="245" HeightRequest="100" Spacing="0">
+                <StackLayout HorizontalOptions="EndAndExpand" HeightRequest="90" WidthRequest="90" Margin="5">
+                    <Button x:Name="TL" FontSize="50" HeightRequest="90" WidthRequest="90" BackgroundColor="White" Clicked="PlayMoveClicked"></Button>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" HeightRequest="90" WidthRequest="90" Margin="5">
+                    <Button x:Name="TC" FontSize="50" HeightRequest="90" WidthRequest="90" BackgroundColor="White" Clicked="PlayMoveClicked"></Button>
+                </StackLayout>
+                <StackLayout HorizontalOptions="StartAndExpand" HeightRequest="90" WidthRequest="90" Margin="5">
+                    <Button x:Name="TR" FontSize="50" HeightRequest="90" WidthRequest="90" BackgroundColor="White" Clicked="PlayMoveClicked"></Button>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" WidthRequest="245" HeightRequest="100" Spacing="0">
+                <StackLayout HorizontalOptions="EndAndExpand" HeightRequest="90" WidthRequest="90" Margin="5">
+                    <Button x:Name="CL" FontSize="50" HeightRequest="90" WidthRequest="90" BackgroundColor="White" Clicked="PlayMoveClicked"></Button>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" HeightRequest="90" WidthRequest="90" Margin="5">
+                    <Button x:Name="CC" FontSize="50" HeightRequest="90" WidthRequest="90" BackgroundColor="White" Clicked="PlayMoveClicked"></Button>
+                </StackLayout>
+                <StackLayout HorizontalOptions="StartAndExpand" HeightRequest="90" WidthRequest="90" Margin="5">
+                    <Button x:Name="CR" FontSize="50" HeightRequest="90" WidthRequest="90" BackgroundColor="White" Clicked="PlayMoveClicked"></Button>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" WidthRequest="245" HeightRequest="100" Spacing="0">
+                <StackLayout HorizontalOptions="EndAndExpand" HeightRequest="90" WidthRequest="90" Margin="5">
+                    <Button x:Name="BL" FontSize="50" HeightRequest="90" WidthRequest="90" BackgroundColor="White" Clicked="PlayMoveClicked"></Button>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" HeightRequest="90" WidthRequest="90" Margin="5">
+                    <Button x:Name="BC" FontSize="50" HeightRequest="90" WidthRequest="90" BackgroundColor="White" Clicked="PlayMoveClicked"></Button>
+                </StackLayout>
+                <StackLayout HorizontalOptions="StartAndExpand" HeightRequest="90" WidthRequest="90" Margin="5">
+                    <Button x:Name="BR" FontSize="50" HeightRequest="90" WidthRequest="90" BackgroundColor="White" Clicked="PlayMoveClicked"></Button>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
 
 </ContentPage>
